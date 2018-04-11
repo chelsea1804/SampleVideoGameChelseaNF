@@ -98,8 +98,8 @@ function scene:create( event )
     playButton = widget.newButton( 
         {   
             -- Set its position on the screen relative to the screen size
-            x = display.contentWidth/2,
-            y = display.contentHeight*7/8,
+            x = display.contentWidth/7,
+            y = display.contentHeight*5/8,
 
             -- Insert the images here
             defaultFile = "Images/Start Button Unpressed.png",
@@ -115,8 +115,12 @@ function scene:create( event )
     creditsButton = widget.newButton( 
         {
             -- Set its position on the screen relative to the screen size
-            x = display.contentWidth*7/8,
-            y = display.contentHeight*7/8,
+            x = display.contentWidth*1/8,
+            y = display.contentHeight*6/8,
+
+            width = 180,
+            height = 80,
+
 
             -- Insert the images here
             defaultFile = "Images/Credits Button Unpressed.png",
@@ -132,8 +136,8 @@ function scene:create( event )
     instructionsButton = widget.newButton( 
         {
             -- Set its position on the screen relative to the screen size
-            x = 200,
-            y = 700,
+            x = 100,
+            y = 660,
             width = 180,
             height = 80,
 
