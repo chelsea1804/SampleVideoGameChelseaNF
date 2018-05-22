@@ -28,8 +28,8 @@ local turtle
 local scrollSpeed = 5
 local scrollXSpeed = 9
 local scrollYSpeed = -4
-local pianoSounds = audio.loadSound("Sounds/pianoEdited.mp3")
-local pianoSoundsChannel
+local blessedSounds = audio.loadSound("Sounds/blessed.mp3")
+local blessedSoundsChannel
 
 --------------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
@@ -105,7 +105,7 @@ function scene:show( event )
 
     elseif ( phase == "did" ) then
         -- start the splash screen music
-        pianoSoundsChannel = audio.play( pianoSounds )
+        blessedSoundsChannel = audio.play( blessedSounds )
 
         -- Call the moveStars function as soon as we enter the frame.
         Runtime:addEventListener("enterFrame", moveTurtle)
@@ -141,7 +141,7 @@ function scene:hide( event )
     elseif ( phase == "did" ) then
         
         -- stop the jungle sounds channel for this screen
-        audio.stop(pianoSoundsChannel)
+        audio.stop(blessedSoundsChannel)
     end
 
 end --function scene:hide( event )
